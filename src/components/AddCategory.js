@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-
 export const AddCategory = ({setCategories}) => {
 
 
@@ -9,7 +8,8 @@ export const AddCategory = ({setCategories}) => {
 
 
     const handleInpuntChange = (e) =>{
-        setinpuntValue( e.target.value)
+        setinpuntValue( e.target.value )
+
     } 
     
     const handleSubmit = (e) => {
@@ -24,11 +24,12 @@ export const AddCategory = ({setCategories}) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={ handleSubmit }>
+            <p> { inpuntValue } </p>
             <input
                 type="text"
-                value = {inpuntValue}
-                onChange={ handleInpuntChange}
+                value = { inpuntValue }
+                onChange={ handleInpuntChange }
             />
         </form>
     )
